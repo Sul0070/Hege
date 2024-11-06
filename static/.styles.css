@@ -45,8 +45,8 @@ header {
 }
 
 .character img {
-    width: 120px;  /* Adjust the image size */
-    height: 120px; /* Adjust the image size */
+    width: 12px;  /* Adjust the image size */
+    height: 12px; /* Adjust the image size */
     object-fit: cover; /* Ensures the image maintains its aspect ratio */
 }
 
