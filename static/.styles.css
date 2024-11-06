@@ -51,7 +51,8 @@ header {
 }
 
 .health-bar {
-    width: 200px;
+    width: 100%;  /* Use percentage width for responsiveness */
+    max-width: 200px;  /* Limit the max width */
     height: 20px;
     background-color: green;
     position: absolute;
@@ -75,7 +76,7 @@ header {
     border: 2px solid #FF6600;
     color: white;
     font-size: 16px;
-    padding: 10px 20px;
+    padding: 12px 25px;  /* Adjust padding for better size */
     margin: 0 10px;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -93,8 +94,6 @@ footer {
 
 /* Animation for attacking movement */
 .character img {
-    width: 150px;
-    height: 150px;
     transition: transform 0.5s ease;
 }
 
@@ -106,8 +105,12 @@ footer {
 .attack-move-left {
     transform: translateX(-30px); /* Move character 30px to the left */
 }
+
 .character-selection {
     margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .character-selection h3 {
@@ -118,8 +121,8 @@ footer {
     background-color: #FF9900;
     border: 2px solid #FF6600;
     color: white;
-    font-size: 16px;
-    padding: 10px 20px;
+    font-size: 18px; /* Larger font for readability */
+    padding: 12px 25px; /* Adjust padding */
     margin: 0 5px;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -128,3 +131,23 @@ footer {
 .character-selection button:hover {
     background-color: #FF6600;
 }
+
+@media screen and (max-width: 600px) {
+    .game-container {
+        padding: 10px;
+    }
+
+    .character img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .health-bar {
+        width: 150px;
+    }
+
+    .attack-btn {
+        padding: 8px 16px;
+    }
+}
+
